@@ -43,30 +43,30 @@ ${green}[${yellow}05${green}] ${white}SYN Attack              ${green}[${yellow}
 read -p 'Select option: ' option
 if ["$option" == "01"] then
 quacksms
-elif "$option" == "02"] then
+elif ["$option" == "02"] then
 quacktype="NTP"
 quackip
-elif "$option" == "03"] then
+elif ["$option" == "03"] then
 quacktype="TCP"
 quackip
-elif "$option" == "04"] then
+elif ["$option" == "04"] then
 quacktype="UDP"
 quackip
-elif "$option" == "05"] then
+elif ["$option" == "05"] then
 quacktype="SYN"
 quackip
-elif "$option" == "06"] then
+elif ["$option" == "06"] then
 quacktype="POD"
 quackip
-elif "$option" == "07"] then
+elif ["$option" == "07"] then
 quacktype="SLOWLORIS"
 quackip
-elif "$option" == "08"] then
+elif ["$option" == "08"] then
 quacktype="MEMCACHED"
 quackip
-elif "$option" == "09"] then
+elif ["$option" == "09"] then
 quackhttp
-elif "$option" == "10"] then
+elif ["$option" == "10"] then
 quacktype="NJRAT"
 quackip
 else echo -e "${red}Invalid option"${white}
