@@ -40,7 +40,7 @@ ${green}[${yellow}04${green}] ${white}UDP Attack              ${green}[${yellow}
 ${green}[${yellow}05${green}] ${white}SYN Attack              ${green}[${yellow}10${green}] ${white}NjRAT    
  
 "${white}
-read -p "${green}Select option: "${white} option
+read -p "Select option: " option
 if ["$option" == "01" || "$option" == "1"]]; then
 quacksms
 elif "$option" == "02" || "$option" == "2"]]; then
