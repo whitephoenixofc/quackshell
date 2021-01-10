@@ -1,3 +1,5 @@
+pwd=$(pwd)
+source ${pwd}/svar.sh
 function banner(){
 echo "${white}
                                             
